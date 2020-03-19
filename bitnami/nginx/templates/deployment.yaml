@@ -94,3 +94,9 @@ spec:
             name: {{ template "nginx.fullname" . }}-{{ .Values.serverBlockConfigMap }}
         {{- end }}
       {{- end }}
+      {{- if .Values.serverBlockConfigMap }}
+      volumes:
+        - name: nginx-server-block-cm
+          configMap:
+            name: {{ template "nginx.fullname" . }}-{{ .Values.serverBlockConfigMap }}
+      {{- end }}
