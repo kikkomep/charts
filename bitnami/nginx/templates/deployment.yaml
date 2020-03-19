@@ -46,10 +46,16 @@ spec:
           {{- if .Values.resources }}
           resources: {{- toYaml .Values.resources | nindent 12 }}
           {{- end }}
-          {{- if .Values.serverBlock }}
+          {{- if or .Values.serverBlock .Values.serverBlockConfigMap }}
           volumeMounts:
+          {{- if .Values.serverBlock }}
             - name: nginx-server-block
               mountPath: /opt/bitnami/nginx/conf/server_blocks
+          {{- end }}
+          {{- if .Values.serverBlockConfigMap }}
+            - name: nginx-server-block-cm
+              mountPath: /opt/bitnami/nginx/conf/server_blocks
+          {{- end }}
           {{- end }}
         {{- if .Values.metrics.enabled }}
         - name: metrics
@@ -75,9 +81,16 @@ spec:
           resources: {{- toYaml .Values.metrics.resources | nindent 12 }}
           {{- end }}
         {{- end }}
-      {{- if .Values.serverBlock }}
+      {{- if or .Values.serverBlock .Values.serverBlockConfigMap }}
       volumes:
+        {{- if .Values.serverBlock }}
         - name: nginx-server-block
           configMap:
             name: {{ template "nginx.fullname" . }}
+        {{- end }}
+        {{- if .Values.serverBlockConfigMap }}
+        - name: nginx-server-block-cm
+          configMap:
+            name: {{ template "nginx.fullname" . }}-{{ .Values.serverBlockConfigMap }}
+        {{- end }}
       {{- end }}
