@@ -3,7 +3,30 @@ entries:
   nginx:
   - apiVersion: v1
     appVersion: 1.16.1
-    created: "2020-03-19T14:19:18.174905+01:00"
+    created: "2020-03-19T19:27:15.039611+01:00"
+    description: Chart for the nginx server
+    digest: 21c527ad9618dd35f1f872c94994590c67da9b7cca0eb5bd717be85e1e81dd9d
+    engine: gotpl
+    home: http://www.nginx.org
+    icon: https://bitnami.com/assets/stacks/nginx/img/nginx-stack-220x234.png
+    keywords:
+    - nginx
+    - http
+    - web
+    - www
+    - reverse proxy
+    maintainers:
+    - email: containers@bitnami.com
+      name: Bitnami
+    name: nginx
+    sources:
+    - https://github.com/bitnami/bitnami-docker-nginx
+    urls:
+    - https://kikkomep.github.io/charts/nginx-5.2.0.tgz
+    version: 5.2.0
+  - apiVersion: v1
+    appVersion: 1.16.1
+    created: "2020-03-19T19:27:15.036332+01:00"
     description: Chart for the nginx server
     digest: 64da9e584d732f44b25ceb84126214dddff8684eb2f94a201086be53dddb11a2
     engine: gotpl
@@ -24,4 +47,4 @@ entries:
     urls:
     - https://kikkomep.github.io/charts/nginx-5.1.10.tgz
     version: 5.1.10
-generated: "2020-03-19T14:19:18.173784+01:00"
+generated: "2020-03-19T19:27:15.033753+01:00"
