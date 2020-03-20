@@ -30,6 +30,10 @@ spec:
       {{- if .Values.tolerations }}
       tolerations: {{- include "nginx.tplValue" (dict "value" .Values.tolerations "context" $) | nindent 8 }}
       {{- end }}
+      {{- if .Values.initContainers }}
+      initContainers:
+{{ tpl .Values.initContainers . | indent 8 }}
+      {{- end}}
       containers:
         - name: nginx
           image: {{ template "nginx.image" . }}
