@@ -52,6 +52,10 @@ image:
 ##
 # serverBlock:
 
+## Custom server block to be added to NGINX configuration via configMap.
+## The configMap may contain one or more config files.
+# serverBlockConfigMap: 
+
 ## Number of replicas to deploy
 ##
 replicaCount: 1
