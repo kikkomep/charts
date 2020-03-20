@@ -26,6 +26,15 @@ image:
   # pullSecrets:
   #   - myRegistryKeySecretName
 
+## InitContainers to be added to the Pod spec
+## Example of 
+## initContainers: |-
+##   - name: init
+##     image: "kikkomep/k8s-wait-for:latest"
+##     imagePullPolicy: {{ .Values.image.pullPolicy }}
+##     args: ["job", "test"]
+# initContainers:
+
 ## String to partially override nginx.fullname template (will maintain the release name)
 ##
 # nameOverride:
