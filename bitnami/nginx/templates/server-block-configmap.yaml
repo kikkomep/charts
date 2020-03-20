@@ -6,5 +6,5 @@ metadata:
   labels: {{- include "nginx.labels" . | nindent 4 }}
 data:
   server-block.conf: |-
-{{ .Values.serverBlock | indent 4 }}
+{{ tpl .Values.serverBlock . | indent 4 }}
 {{- end -}}
