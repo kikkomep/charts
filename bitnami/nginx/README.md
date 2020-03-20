@@ -61,6 +61,7 @@ The following tables lists the configurable parameters of the NGINX Open Source 
 | `nameOverride`                         | String to partially override nginx.fullname template                                        | `nil`                                                        |
 | `fullnameOverride`                     | String to fully override nginx.fullname template                                            | `nil`                                                        |
 | `serverBlock`                          | Custom NGINX server block                                                                   | `nil`                                                        |
+| `serverBlockConfigMap`                 | Custom NGINX server blocks as a user-defined ConfigMap                                       | `nil`                                                        |
 | `replicaCount`                         | Number of replicas to deploy                                                                | `1`                                                          |
 | `podAnnotations`                       | Pod annotations                                                                             | `{}`                                                         |
 | `affinity`                             | Map of node/pod affinities                                                                  | `{}` (The value is evaluated as a template)                  |
