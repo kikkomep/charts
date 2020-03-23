@@ -61,6 +61,12 @@ image:
 ##
 # serverBlock:
 
+## A claim for a volume to be mounted
+# serverDataVolumeClaim: 
+
+serverDataVolumeName: nginx-server-data
+serverDataVolumePath: /app/static
+
 ## Custom server block to be added to NGINX configuration via configMap.
 ## The configMap may contain one or more config files.
 # serverBlockConfigMap: 
