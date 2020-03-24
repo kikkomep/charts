@@ -112,6 +112,6 @@ spec:
       volumes:
         - name: {{ .Values.serverDataVolumeName }}
           persistentVolumeClaim:
-            claimName: {{ .Values.serverDataVolumeClaim }}
+            claimName: {{ template "nginx.fullname" . }}-{{ .Values.serverDataVolumeClaim }}
             readOnly: false
       {{- end }}

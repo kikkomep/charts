@@ -61,8 +61,8 @@ image:
 ##
 # serverBlock:
 
-## A claim for a volume to be mounted
-# serverDataVolumeClaim: 
+## A claim for a volume to be mounted (will maintain the release name)
+# serverDataVolumeClaim: static-files
 
 serverDataVolumeName: nginx-server-data
 serverDataVolumePath: /app/static
