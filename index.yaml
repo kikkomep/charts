@@ -3,9 +3,9 @@ entries:
   nginx:
   - apiVersion: v1
     appVersion: 1.16.1
-    created: "2020-03-24T09:25:33.857403+01:00"
+    created: "2020-03-24T10:57:02.351277+01:00"
     description: Chart for the nginx server
-    digest: 42fa775553843646c5cb0e63569dfe40ddfc51f9de71f2327f278d4b0e7ea615
+    digest: f65a74aff1b6ca59d4f05de69ca7ef0fdda6c586ead7dffed3adbb2c3f5d294a
     engine: gotpl
     home: http://www.nginx.org
     icon: https://bitnami.com/assets/stacks/nginx/img/nginx-stack-220x234.png
@@ -26,7 +26,7 @@ entries:
     version: 5.3.0
   - apiVersion: v1
     appVersion: 1.16.1
-    created: "2020-03-24T09:25:33.856743+01:00"
+    created: "2020-03-24T10:57:02.34975+01:00"
     description: Chart for the nginx server
     digest: 7f8103a7cdcba4a41f1727c3709da00a38ddbcd9f38bb9d85f3b2506ba273b4f
     engine: gotpl
@@ -49,7 +49,7 @@ entries:
     version: 5.2.0
   - apiVersion: v1
     appVersion: 1.16.1
-    created: "2020-03-24T09:25:33.856033+01:00"
+    created: "2020-03-24T10:57:02.347881+01:00"
     description: Chart for the nginx server
     digest: 64da9e584d732f44b25ceb84126214dddff8684eb2f94a201086be53dddb11a2
     engine: gotpl
@@ -70,4 +70,4 @@ entries:
     urls:
     - https://kikkomep.github.io/charts/nginx-5.1.10.tgz
     version: 5.1.10
-generated: "2020-03-24T09:25:33.855063+01:00"
+generated: "2020-03-24T10:57:02.342374+01:00"
