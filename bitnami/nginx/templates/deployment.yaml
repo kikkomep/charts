@@ -61,8 +61,8 @@ spec:
               mountPath: /opt/bitnami/nginx/conf/server_blocks
           {{- end }}
           {{- if .Values.serverDataVolumeClaim }}
-          - name: {{ .Values.serverDataVolumeName }}
-            mountPath: {{ .Values.serverDataVolumePath}}
+            - name: {{ .Values.serverDataVolumeName }}
+              mountPath: {{ .Values.serverDataVolumePath}}
           {{- end }}
           {{- end }}
         {{- if .Values.metrics.enabled }}
