@@ -102,11 +102,6 @@ spec:
             name: {{ template "nginx.fullname" . }}-{{ .Values.serverBlockConfigMap }}
         {{- end }}
       {{- end }}
-      {{- if .Values.serverBlockConfigMap }}
-        - name: nginx-server-block-cm
-          configMap:
-            name: {{ template "nginx.fullname" . }}-{{ .Values.serverBlockConfigMap }}
-      {{- end }}
       {{- if .Values.serverDataVolumeClaim }}
         - name: {{ tpl .Values.serverDataVolumeName . }}
           persistentVolumeClaim:
