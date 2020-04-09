@@ -108,7 +108,7 @@ spec:
             name: {{ template "nginx.fullname" . }}-{{ .Values.serverBlockConfigMap }}
       {{- end }}
       {{- if .Values.serverDataVolumeClaim }}
-        - name: {{ .Values.serverDataVolumeName }}
+        - name: {{ tpl .Values.serverDataVolumeName . }}
           persistentVolumeClaim:
             claimName: {{ tpl .Values.serverDataVolumeClaim . }}
             readOnly: false
