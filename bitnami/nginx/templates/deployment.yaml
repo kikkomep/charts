@@ -89,15 +89,9 @@ spec:
           resources: {{- toYaml .Values.metrics.resources | nindent 12 }}
           {{- end }}
         {{- end }}
-<<<<<<< HEAD
-      {{- if or .Values.serverBlock .Values.serverBlockConfigMap }}
-      volumes:
-        {{- if .Values.serverBlock }}
-=======
       {{- if or .Values.serverBlock .Values.serverBlockConfigMap .Values.serverDataVolumeClaim }}
       volumes:
       {{- if .Values.serverBlock }}
->>>>>>> 84331b33... Fix volume block
         - name: nginx-server-block
           configMap:
             name: {{ template "nginx.fullname" . }}
@@ -116,7 +110,6 @@ spec:
       {{- if .Values.serverDataVolumeClaim }}
         - name: {{ .Values.serverDataVolumeName }}
           persistentVolumeClaim:
-            claimName: {{ template "nginx.fullname" . }}-{{ .Values.serverDataVolumeClaim }}
+            claimName: {{ tpl .Values.serverDataVolumeClaim . }}
             readOnly: false
-      {{- end }}
       {{- end }}
