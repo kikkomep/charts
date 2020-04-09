@@ -62,7 +62,7 @@ image:
 # serverBlock:
 
 ## A claim for a volume to be mounted evaluated as template
-serverDataVolumeClaim: "{{ .Release.Name }}-nginx-data-claim"
+#serverDataVolumeClaim: "{{ .Release.Name }}-nginx-data-claim"
 
 serverDataVolumeName: nginx-server-data
 serverDataVolumePath: /app/static
